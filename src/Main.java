@@ -28,6 +28,7 @@ public class Main {
 
 
         Callable<String> callableTask = () -> {
+            Thread.sleep(3000);
             printInfo();
             return Thread.currentThread().getName();
         };
@@ -44,6 +45,8 @@ public class Main {
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
+
+        System.out.println("Кінець main");
 
     }
 }

@@ -5,6 +5,11 @@ public class MyRunnable implements Runnable {
         Thread thread = Thread.currentThread();
         System.out.println("Runnable Thread");
         System.out.println("Name: " + thread.getName());
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         System.out.println("Priority: " + thread.getPriority());
         System.out.println("Thread Group Name: " + thread.getThreadGroup().getName());
         System.out.println();
