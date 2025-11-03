@@ -15,11 +15,6 @@ public class Main {
                     System.out.println("Worker interrupted. Exiting...");
                     break;
                 }
-
-                if (Thread.currentThread().isInterrupted()) {
-                    System.out.println("Worker detected interrupt. Exiting...");
-                    break;
-                }
             }
         }
     }
